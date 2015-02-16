@@ -1,0 +1,28 @@
+section.home-header {
+	text-align: center;
+	h1 {
+		font-family: 'Vollkorn', "Times New Roman", Times, serif;
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	.scroller {
+	  div {
+		  img {
+		  	display: block;
+		  	margin-right: auto;
+		  	margin-left: auto;
+		  }
+	    text-align: center;
+	    font-size: 30px;
+	  }
+	}
+}
+
+section.intro-brig {
+	text-align: center;
+	p {
+		line-height: 2.5rem;
+	}
+}

@@ -46,8 +46,8 @@
 
 // We use these to control various global styles
 // $body-bg: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: #585457;
+$body-font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -1302,47 +1302,47 @@
 // CUSTOM FOUNDATION STYLES
 /* Top and Bottom Spacers */
 .big-spacer {
-	padding: 7em 0;
+	padding: 7rem 0;
 }
 .medium-spacer {
-	padding: 4em 0;
+	padding: 4rem 0;
 }
 .small-spacer {
-	padding: 2em 0;
+	padding: 2rem 0;
 }
 .mini-spacer {
-	padding: 1em 0;
+	padding: 1rem 0;
 }
 
 
 /* Top Spacers */
 .big-spacer-top {
-	padding-top: 7em;
+	padding-top: 7rem;
 }
 .medium-spacer-top {
-	padding-top: 4em;
+	padding-top: 4rem;
 }
 .small-spacer-top {
-	padding-top: 2em;
+	padding-top: 2rem;
 }
 .mini-spacer-top {
-	padding-top: 1em;
+	padding-top: 1rem;
 }
 
 
 
 /* Bottom Spacers */
 .big-spacer-bottom {
-	padding-bottom: 7em;
+	padding-bottom: 7rem;
 }
 .medium-spacer-bottom {
-	padding-bottom: 4em;
+	padding-bottom: 4rem;
 }
 .small-spacer-bottom {
-	padding-bottom: 2em;
+	padding-bottom: 2rem;
 }
 .mini-spacer-bottom {
-	padding-bottom: 1em;
+	padding-bottom: 1rem;
 }
 
 
@@ -1355,15 +1355,15 @@ h1 {
 p {
 	color: #585457;
 	font-size: 1.5rem;
-	line-height: 1.8em;
+	line-height: 1.8rem;
 }
 .alert-box {
 	border: none;
-	padding: 1.5em;
-	font-size: 1.5em;
+	padding: 1.5rem;
+	font-size: 1.5rem;
 	margin-bottom: 0;
 	font-weight: 200;
 	a.close {
-		font-size: 1.5em;
+		font-size: 1.5rem;
 	}
 }
