@@ -27,8 +27,8 @@ class MemoriesController < ApplicationController
 
     respond_to do |format|
       if @memory.save
-        format.html { redirect_to @memory, notice: 'Memory was successfully created.' }
-        format.json { render :show, status: :created, location: @memory }
+        format.html { redirect_to memories_path, notice: 'Memory was successfully created.' }
+        format.json { render :show, status: :created, location: memories_path }
       else
         format.html { render :new }
         format.json { render json: @memory.errors, status: :unprocessable_entity }
