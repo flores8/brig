@@ -16,5 +16,3 @@
 //= require turbolinks
 //= require jquery.slick
 //= require_tree .
-
-$(function(){ $(document).foundation(); });

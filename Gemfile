@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'foundation-rails'
 gem "jquery-slick-rails"
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 # Default gems
 gem 'rails', '4.1.8'
