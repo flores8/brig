@@ -41,8 +41,8 @@ class MemoriesController < ApplicationController
   def update
     respond_to do |format|
       if @memory.update(memory_params)
-        format.html { redirect_to @memory, notice: 'Memory was successfully updated.' }
-        format.json { render :show, status: :ok, location: @memory }
+        format.html { redirect_to memories_path, notice: 'Memory was successfully updated.' }
+        format.json { render :show, status: :ok, location: memories_path }
       else
         format.html { render :edit }
         format.json { render json: @memory.errors, status: :unprocessable_entity }
