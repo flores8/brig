@@ -37,12 +37,21 @@
   </div>
 </section>
 
-<section class="all-memories">
+<section class="all-memories big-spacer-bottom">
   <% @memories.each do |memory| %>
+  <!-- Memory -->
   <div class="row">
-    <div class="small-12 medium-10 small-centered columns">
+    <div class="small-12 medium-10 small-centered columns medium-spacer-top">
       <%= memory.post %>
     </div>
   </div>
+
+  <!-- Who Shared this Memory? -->
+  <div class="row">
+    <div class="small-12 medium-10 small-centered columns small-spacer-top">
+      <%= memory.name %>
+    </div>
+  </div>
+
   <% end %>
 </section>
