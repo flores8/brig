@@ -88,7 +88,7 @@
 		padding: 1em;
 	}
 	input[type="submit"] {
-		@include button ($pink, white, 1em 1em);
+		@include button ($blue, white, 1em 1em);
 		@include border-radius (1px);
 		display: inline-block;
 		text-align: center;
@@ -100,7 +100,7 @@
 		margin-top: .5em;
 		@include transition (.4s);
 		&:hover {
-			background-color: darken($pink, 5%);
+			background-color: darken($blue, 5%);
 			@include transition (.4s);
 		}
 	}
