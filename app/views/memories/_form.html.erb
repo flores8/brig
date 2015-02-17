@@ -1,25 +1,41 @@
-<%= form_for(@memory) do |f| %>
-  <% if @memory.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@memory.errors.count, "error") %> prohibited this memory from being saved:</h2>
-
-      <ul>
-      <% @memory.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div id="form">
+  <%= form_for(@memory) do |f| %>
+    <!-- Error Message -->
+    <div class="row">
+      <div class="small-12 columns">
+        <% if @memory.errors.any? %>
+          <div id="error_explanation">
+            <p class="error"><%= pluralize(@memory.errors.count, "error") %> prohibited this memory from being saved:</p>
+            <ul>
+              <% @memory.errors.full_messages.each do |msg| %>
+                <li><p><%= msg %></p></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :post %><br>
-    <%= f.text_area :post %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+    <!-- Memory Text Area -->
+    <div class="row">
+      <div class="small-12 medium-centered columns">
+        <%= f.text_area :post %>
+      </div>
+    </div>
+
+    <!-- Who Shared This Memory? -->
+    <div class="row">
+      <div class="small-12 medium-centered columns">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+
+    <!-- Create this Memory -->
+    <div class="row">
+      <div class="small-12 medium-7 medium-centered columns">
+        <%= f.submit "Share My Story", class: "button expand" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>

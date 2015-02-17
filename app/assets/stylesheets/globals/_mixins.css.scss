@@ -10,3 +10,18 @@
 	-moz-border-radius: $px;
 	border-radius: $px;
 }
+
+@mixin button ($bg_color, $color, $padding) {
+	background-color: ($bg_color);
+	border: none;
+	color: $color;
+	padding: ($padding);
+	@include border-radius(1px);
+	@include transition (.4s);
+	&:hover {
+		text-decoration: none;
+		background-color: darken($bg_color, 5%);
+		color: $color;
+		@include transition (.4s);
+	}
+}

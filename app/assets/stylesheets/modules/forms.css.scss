@@ -1,0 +1,117 @@
+@import "globals/all";
+
+#form {
+	p {
+		color: $text;
+		font-size: 2em;
+		line-height: 1.6em;
+		padding-bottom: 1.5em;
+	}
+	#error_explanation {
+		font-size: 1.1rem;
+		background-color: $pink;
+		padding: 2em;
+		p.error {
+			color: $white;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		ul {
+			padding-left: 2em;
+			color: $white;
+			font-size: .8rem;
+		}
+		ul li p {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			color: $white;
+		}
+	}
+	h2 {
+		color: $pink;
+		font-family: 'Source Sans Pro', sans-serif;
+		text-align: center;
+		font-size: 2.5em;
+		padding-bottom: 1em;
+	}
+	label {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.5em;
+		line-height: 1.4em;
+	}
+	input[type="text"], input[type="email"], input[type="password"], textarea {
+		background: $gray;
+		height: 3.125em;
+		box-shadow: none;
+		font-size: 1.5em;
+		line-height: 1.4em;
+		font-family: 'Source Sans Pro', sans-serif;
+		color: #8BA0B3;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		size: 100%;
+		height: 100%;
+		padding: 1em;
+		margin: 1em 0;
+		@include transition (.4s);
+		&:focus {
+			border: 2px solid #8BA0B3;
+			box-shadow: none;
+			background-color: $offWhite;
+		}
+	}
+	input[type="text"].off-white, input[type="email"].off-white, input[type="password"].off-white, textarea.off-white {
+		background: $lightGray;
+	}
+	input[type="text"].border-bottom, input[type="email"].border-bottom, input[type="password"].border-bottom, textarea.border-bottom {
+		border-bottom: 3px solid $gray;
+		&:focus {
+			border: 3px solid darken($blue, 15%);
+			box-shadow: none;
+			background: $offWhite;
+		}
+	}
+	input[type="text"].border, input[type="email"].border, input[type="password"].border, textarea.border {
+		border: 3px solid $gray;
+		&:focus {
+			border: 3px solid darken($blue, 15%);
+			box-shadow: none;
+			background: $offWhite;
+		}
+	}
+	input[type="text"].background, input[type="email"].background, input[type="password"].background, textarea.background {
+		background: $gray;
+	}
+	textarea {
+		height: 12em;
+		padding: 1em;
+	}
+	input[type="submit"] {
+		@include button ($pink, white, 1em 1em);
+		@include border-radius (1px);
+		display: inline-block;
+		text-align: center;
+		border: none;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.7em;
+		font-weight: 200;
+		text-transform: uppercase;
+		margin-top: .5em;
+		@include transition (.4s);
+		&:hover {
+			background-color: darken($pink, 5%);
+			@include transition (.4s);
+		}
+	}
+	input[type="submit"].notice {
+		@include button ($blue, white, 1em 1em);
+	}
+	.button {
+		font-size: .55em;
+	}
+}
+	
+p.error {
+	color: $pink;
+}
