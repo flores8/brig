@@ -46,7 +46,7 @@
 		font-size: 1.5em;
 		line-height: 1.4em;
 		font-family: 'Source Sans Pro', sans-serif;
-		color: #8BA0B3;
+		color: $blue;
 		border: none;
 		border-radius: 0;
 		width: 100%;
@@ -56,13 +56,13 @@
 		margin: 1em 0;
 		@include transition (.4s);
 		&:focus {
-			border: 2px solid #8BA0B3;
+			border: 2px solid $blue;
 			box-shadow: none;
 			background-color: $offWhite;
 		}
 	}
 	input[type="text"].off-white, input[type="email"].off-white, input[type="password"].off-white, textarea.off-white {
-		background: $lightGray;
+		background: $white;
 	}
 	input[type="text"].border-bottom, input[type="email"].border-bottom, input[type="password"].border-bottom, textarea.border-bottom {
 		border-bottom: 3px solid $gray;
