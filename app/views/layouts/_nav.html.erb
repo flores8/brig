@@ -1,0 +1,23 @@
+<div id="nav">
+	<div class="fixed">
+		<div class="contain-to-grid">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						<h1><%= link_to "Brig", root_path %></h1>
+					</li>
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
+
+				<section class="top-bar-section">
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+						<li class="<%= 'active' if current_page?(new_memory_path) %>"><%= link_to "Share a Memory", new_memory_path %></li>
+						<li class="<%= 'active' if current_page?(new_private_memory_path) %>"><%= link_to "Share a Private Memory", new_private_memory_path %></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+</div>

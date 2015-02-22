@@ -1,0 +1,34 @@
+@import "globals/all";
+
+/* Border along top */
+.fixed {
+	border-bottom: 5px solid $blue;
+}
+
+/* Padding the body to make room for the nav */
+.nav-padding {
+	margin-top: 80px;
+}
+
+/* Padding to the notification to appear below the navbar */
+.nav-notification {
+	margin-top: 82px;
+}
+/* Lauralee Flores Logo styling */
+ul.title-area li.name h1 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	a {
+		@include transition(.4s);
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+/* Right Nav */
+nav.top-bar ul li {
+	a {
+		@include transition(.3s);
+	}
+}

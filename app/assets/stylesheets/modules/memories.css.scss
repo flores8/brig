@@ -30,3 +30,22 @@ section.intro-brig {
 		line-height: 2.5rem;
 	}
 }
+
+section.share-memory {
+	h1 {
+		font-family: 'Vollkorn', "Times New Roman", Times, serif;
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	p.back {
+		/*margin-left: 2rem;*/
+		a {
+			@include button ($blue, $white, .5rem 2rem);
+			font-size: 1rem;
+		}
+	}
+	p {
+		font-size: 1.6rem;
+		line-height: 2.5rem;
+	}
+}
