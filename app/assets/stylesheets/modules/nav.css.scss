@@ -2,7 +2,7 @@
 
 /* Border along top */
 .fixed {
-	border-bottom: 5px solid $blue;
+	border-top: 5px solid $blue;
 }
 
 /* Padding the body to make room for the nav */
@@ -14,14 +14,22 @@
 .nav-notification {
 	margin-top: 82px;
 }
-/* Lauralee Flores Logo styling */
+/* BRIG Logo styling */
 ul.title-area li.name h1 {
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-size: 2rem;
+	padding: 0rem;
+	line-height: 2rem;
 	a {
-		@include transition(.4s);
+		@include transition(.5s);
+		border: 3px solid $text;
+		padding: 0.25rem 1rem;
+		margin: 1rem;
 		&:hover {
-			color: $blue;
+			color: $white;
+			background-color: $blue;
+			border-color: $blue;
 		}
 	}
 }
