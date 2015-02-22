@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @private_memory.body %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @private_memory.name %>
+</p>
+
+<%= link_to 'Edit', edit_private_memory_path(@private_memory) %> |
+<%= link_to 'Back', private_memories_path %>

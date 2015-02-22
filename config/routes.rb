@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :private_memories
+
   resources :memories
 
   root 'memories#index'
