@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :private_memories
+  resources :private_memories, path: "private"
 
   resources :memories
 
