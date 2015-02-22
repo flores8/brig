@@ -28,7 +28,7 @@ class PrivateMemoriesController < ApplicationController
 
     respond_to do |format|
       if @private_memory.save
-        format.html { redirect_to @private_memory, notice: 'Private memory was successfully created.' }
+        format.html { redirect_to @private_memory, notice: 'Thank you for sharing your memory of Brig!' }
         format.json { render :show, status: :created, location: @private_memory }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PrivateMemoriesController < ApplicationController
   def update
     respond_to do |format|
       if @private_memory.update(private_memory_params)
-        format.html { redirect_to @private_memory, notice: 'Private memory was successfully updated.' }
+        format.html { redirect_to @private_memory, notice: 'Your memory has been updated successfully.' }
         format.json { render :show, status: :ok, location: @private_memory }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PrivateMemoriesController < ApplicationController
   def destroy
     @private_memory.destroy
     respond_to do |format|
-      format.html { redirect_to private_memories_url, notice: 'Private memory was successfully destroyed.' }
+      format.html { redirect_to private_memories_url, notice: 'Your memory has been deleted.' }
       format.json { head :no_content }
     end
   end
