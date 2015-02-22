@@ -9,14 +9,12 @@
 	<div class="row">
 		<div class="small-12 small-8 small-centered columns">
 			<p><%= @private_memory.body %></p>
+			<p><%= @private_memory.name %></p>
 		</div>
 	</div>
 </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @private_memory.name %>
-</p>
+<%= params %>
 
 <%= link_to 'Edit', edit_private_memory_path(@private_memory) %> |
 <%= link_to 'Back', private_memories_path %>
