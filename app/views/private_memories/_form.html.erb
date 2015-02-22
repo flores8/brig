@@ -1,25 +1,41 @@
-<%= form_for(@private_memory) do |f| %>
-  <% if @private_memory.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@private_memory.errors.count, "error") %> prohibited this private_memory from being saved:</h2>
+<div id="form">
+  <%= form_for(@private_memory) do |f| %>
+    <!-- Error Message -->
+    <div class="row">
+      <div class="small-12 columns">
+        <% if @private_memory.errors.any? %>
+          <div id="error_explanation">
+            <p class="error"><%= pluralize(@private_memory.errors.count, "error") %> prohibited this private_memory from being saved:</p>
+            <ul>
+            <% @private_memory.errors.full_messages.each do |message| %>
+              <li><p><%= message %></p></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </div>
 
-      <ul>
-      <% @private_memory.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <!-- Private Memory Text Area -->
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <%= f.text_area :body, placeholder: "Share your story..." %>
+      </div>
+    </div>
+
+    <!-- Who Shared this Memory? -->
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <%= f.text_field :name, placeholder: "Your Name" %>
+      </div>
+    </div>
+
+    <!-- Create This Private Memory -->
+    <div class="row">
+      <div class="small-12 medium-7 small-centered columns">
+        <%= f.submit "Share My Private Story", class: "button expand" %>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
