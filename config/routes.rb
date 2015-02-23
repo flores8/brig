@@ -1,9 +1,32 @@
 Rails.application.routes.draw do
   resources :private_memories, path: "private"
-
   resources :memories
 
+  # authenticated :user do
+  #   resources :memories, only: [:edit, :update, :destroy]
+  # end
+
+  # unauthenticated do
+  #   resources :memories, only: [:index, :new, :create, :show]
+  # end
+
   root 'memories#index'
+
+  # authenticated :user do
+  #   root to: "welcome#index", as: :authenticated_root
+  # end
+
+  # unauthenticated do
+  #   root to: "welcome#about", as: :unauthenticated_root
+  # end
+
+  # authenticated :user do 
+  #   resources :feedbacks, only: [:index], as: :authenticated_feedbacks
+  # end
+
+  # unauthenticated do
+  #   resources :feedbacks, except: [:index], as: :unauthenticated_feedbacks, to: redirect { "/" }, notice: "testing"
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
