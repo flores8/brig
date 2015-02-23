@@ -1,0 +1,2 @@
+class MemoryPolicy < ApplicationPolicy
+end

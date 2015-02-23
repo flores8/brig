@@ -4,6 +4,7 @@ class MemoriesController < ApplicationController
   def index
     @memories = Memory.all
     @memory = Memory.new
+    authorize @memories
   end
 
   # GET /memories/1
@@ -14,6 +15,7 @@ class MemoriesController < ApplicationController
   # GET /memories/new
   def new
     @memory = Memory.new
+    authorize @memory
   end
 
   # GET /memories/1/edit
@@ -24,7 +26,7 @@ class MemoriesController < ApplicationController
   # POST /memories.json
   def create
     @memory = Memory.new(memory_params)
-
+    authorize @memory
     respond_to do |format|
       if @memory.save
         format.html { redirect_to memories_path, notice: 'Thank you for sharing your memory of Brig!' }
@@ -64,6 +66,7 @@ class MemoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_memory
       @memory = Memory.find(params[:id])
+      authorize @memory
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
