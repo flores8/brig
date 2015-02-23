@@ -9,12 +9,11 @@
 	<div class="row">
 		<div class="small-12 small-8 small-centered columns">
 			<p><%= @private_memory.body %></p>
-			<p><%= @private_memory.name %></p>
+			<p class="created-by">submitted <%= time_ago_in_words(@private_memory.created_at) %> ago by <%= @private_memory.name %></p>
+		</div>
+
+		<div class="small-12 medium-6 medium-centered columns small-spacer-top">
+			<%= link_to 'Edit', edit_private_memory_path(@private_memory), class: "button expand" %>
 		</div>
 	</div>
 </div>
-
-<%= params %>
-
-<%= link_to 'Edit', edit_private_memory_path(@private_memory) %> |
-<%= link_to 'Back', private_memories_path %>

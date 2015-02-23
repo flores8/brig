@@ -58,3 +58,16 @@ section.share-memory {
 		line-height: 2.5rem;
 	}
 }
+
+.show-private-memory {
+	a.button {
+		@include button ($blue, $white, 1rem 2rem);
+		font-size: 1.75rem;
+		font-weight: 100;
+	}
+	p.created-by {
+		font-size: 1rem;
+		font-style: italic;
+		color: darken($gray, 25%);
+	}
+}
