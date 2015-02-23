@@ -5,6 +5,7 @@ gem 'foundation-rails'
 gem "jquery-slick-rails"
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'devise'
 
 # Default gems
 gem 'rails', '4.1.8'

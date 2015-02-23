@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :private_memories, path: "private"
   resources :memories
 
