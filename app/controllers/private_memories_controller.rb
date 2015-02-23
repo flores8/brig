@@ -69,6 +69,6 @@ class PrivateMemoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def private_memory_params
-      params.require(:private_memory).permit(:body, :name)
+      params.require(:private_memory).permit(:body, :name, :relationship)
     end
 end
