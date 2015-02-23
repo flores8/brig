@@ -16,7 +16,16 @@
 						<li class="<%= 'active' if current_page?(new_memory_path) %>"><%= link_to "Share a Memory", new_memory_path %></li>
 						<li class="<%= 'active' if controller.controller_name == "private_memories" %>"><%= link_to "Share a Private Memory", new_private_memory_path %></li>
 						<% if admin_signed_in? %>
-							<li><%= link_to "Sign Out", destroy_admin_session_path, method: :delete %></li>
+							<li class="has-dropdown <%= 'active' if current_page?(edit_admin_registration_path) %>">
+								<% if current_admin %>
+									<%= link_to "ADMIN", "#" %>
+										<ul class="dropdown">
+											<li><%= link_to "My Account", edit_admin_registration_path %></li>
+											<li><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></li>
+										</ul>
+								<% else %>
+								<% end %>
+							</li>
 						<% end %>
 
 					</ul>
