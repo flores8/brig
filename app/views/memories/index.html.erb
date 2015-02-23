@@ -44,14 +44,15 @@
   <!-- Memory -->
   <div class="row">
     <div class="small-11 medium-10 small-centered columns medium-spacer-top">
-      <%= link_to memory.post, memory_path(memory) %>
+      <p><%= simple_format(memory.post) %></p>
+      <p class="created-by">submittted <%= time_ago_in_words(memory.created_at) %> ago by <%= memory.name %> <span class="right">Brig's sister</span></p>
     </div>
   </div>
 
   <!-- Who Shared this Memory? -->
   <div class="row">
     <div class="small-11 medium-10 small-centered columns small-spacer-top">
-      by <%= memory.name %>
+      
     </div>
   </div>
 

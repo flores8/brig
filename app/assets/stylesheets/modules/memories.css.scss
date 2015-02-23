@@ -65,9 +65,16 @@ section.share-memory {
 		font-size: 1.75rem;
 		font-weight: 100;
 	}
-	p.created-by {
-		font-size: 1rem;
-		font-style: italic;
-		color: darken($gray, 25%);
+}
+
+p.created-by {
+	font-size: 1rem;
+	font-style: italic;
+	color: darken($gray, 25%);
+}
+
+section.all-memories {
+	p {
+		line-height: 2.5rem;
 	}
 }
