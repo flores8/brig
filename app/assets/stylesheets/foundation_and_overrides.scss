@@ -1198,7 +1198,7 @@ $topbar-margin-bottom: 0;
 $topbar-title-font-size: rem-calc(20);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+$topbar-dropdown-bg: #e2e2e2;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: $font-weight-normal;
@@ -1236,7 +1236,7 @@ $topbar-link-bg-active-hover: #237FBB;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-// $topbar-menu-link-color: #fff;
+$topbar-menu-link-color: #585457;
 $topbar-menu-icon-color: #237FBB;
 $topbar-menu-link-color-toggled: #237FBB;
 $topbar-menu-icon-color-toggled: #237FBB;

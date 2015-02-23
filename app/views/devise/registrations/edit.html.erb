@@ -4,20 +4,21 @@
       <h2>Edit Your Account</h2>
     </div>
 
-    <div class="small-12 medium-9 medium-centered columns" id="account-tabs-navigation">
+    <div class="small-11 medium-9 small-centered columns" id="account-tabs-navigation">
       <ul class="tabs" data-tab>
-        <li class="tab-title active"><%= link_to "Email", "#email" %></li>
-        <li class="tab-title"><%= link_to "Password", "#password" %></li>
+        <li class="tab-title active"><%= link_to "Your Account Type", "#account-type" %></li>
+        <li class="tab-title"><%= link_to "Edit Email", "#email" %></li>
+        <li class="tab-title"><%= link_to "Edit Password", "#password" %></li>
         <li class="tab-title"><%= link_to "Cancel Account", "#cancel-account" %></li>
-        <li class="tab-title"><%= link_to "Your Account Type", "#account-type" %></li>
+        
       </ul>
     </div>
 
     <div class="tabs-content">
       <!-- Email Tab Content -->
-      <div class="content active" id="email">
+      <div class="content" id="email">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <div class="small-12 medium-8 medium-centered columns">
+        <div class="small-11 medium-8 small-centered columns">
           <%= devise_error_messages! %>
 
           <div class="small-spacer">
@@ -39,7 +40,7 @@
       <!-- Password Tab Content -->
       <div class="content" id="password">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <div class="small-12 medium-8 medium-centered columns">
+        <div class="small-11 medium-8 small-centered columns">
           <%= devise_error_messages! %>
 
           <div class="medium-spacer-top small-spacer">
@@ -58,7 +59,7 @@
 
       <!-- Cancel Account Tab Content -->
       <div class="content" id="cancel-account">
-        <div class="small-12 medium-6 medium-centered columns">
+        <div class="small-11 medium-6 small-centered columns">
           <div class="medium-spacer-top">
             <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button expand alert" %>
           </div>
@@ -66,8 +67,8 @@
       </div>
 
       <!-- Account Type -->
-      <div class="content" id="account-type">
-        <div class="small-12 medium-6 medium-centered columns">
+      <div class="content active" id="account-type">
+        <div class="small-11 medium-6 small-centered columns">
           <div class="medium-spacer-top">
             <p>You are an admin user with the priveledge to edit all memories.</p>
           </div>

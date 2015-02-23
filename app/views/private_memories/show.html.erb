@@ -1,18 +1,18 @@
 <div class="show-private-memory">
 	<div class="row">
-		<div class="small-12 small-8 small-centered columns big-spacer-top small-spacer-bottom text-center">
+		<div class="small-11 small-centered columns big-spacer-top small-spacer-bottom text-center">
 			<h1>Your Private Memory</h1>
 			<p></p>
 		</div>
 	</div>
 
 	<div class="row">
-		<div class="small-12 small-8 small-centered columns">
+		<div class="small-11 medium-8 small-centered columns">
 			<p><%= @private_memory.body %></p>
 			<p class="created-by">submitted <%= time_ago_in_words(@private_memory.created_at) %> ago by <%= @private_memory.name %></p>
 		</div>
 
-		<div class="small-12 medium-6 medium-centered columns small-spacer-top">
+		<div class="small-11 medium-6 small-centered columns small-spacer-top">
 			<%= link_to 'Edit', edit_private_memory_path(@private_memory), class: "button expand" %>
 		</div>
 	</div>

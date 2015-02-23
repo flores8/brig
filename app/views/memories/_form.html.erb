@@ -2,7 +2,7 @@
   <%= form_for(@memory) do |f| %>
     <!-- Error Message -->
     <div class="row">
-      <div class="small-12 columns">
+      <div class="small-11 small-centered columns">
         <% if @memory.errors.any? %>
           <div id="error_explanation">
             <p class="error"><%= pluralize(@memory.errors.count, "error") %> prohibited this memory from being saved:</p>
@@ -18,21 +18,21 @@
 
     <!-- Memory Text Area -->
     <div class="row">
-      <div class="small-12 medium-centered columns">
+      <div class="small-11 small-centered columns">
         <%= f.text_area :post, placeholder: "Share your memory..." %>
       </div>
     </div>
 
     <!-- Who Shared This Memory? -->
     <div class="row">
-      <div class="small-12 medium-centered columns">
+      <div class="small-11 small-centered columns">
         <%= f.text_field :name, placeholder: "Your Name" %>
       </div>
     </div>
 
     <!-- Create this Memory -->
     <div class="row">
-      <div class="small-12 medium-7 medium-centered columns">
+      <div class="small-11 medium-7 small-centered columns">
         <%= f.submit "Share My Memory", class: "button expand" %>
       </div>
     </div>

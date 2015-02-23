@@ -21,6 +21,7 @@ ul.title-area li.name h1 {
 	font-size: 2rem;
 	padding: 0rem;
 	line-height: 2rem;
+	text-align: center;
 	a {
 		@include transition(.5s);
 		border: 3px solid $text;
@@ -32,6 +33,16 @@ ul.title-area li.name h1 {
 			border-color: $blue;
 		}
 	}
+}
+
+ul.title-area li.menu-icon a {
+	display: inline-block;
+	position: relative;
+	bottom: 1rem;
+}
+
+ul.title-area li.name {
+	@media only screen and (max-width: 40em) { width: 50%;};
 }
 
 /* Right Nav */

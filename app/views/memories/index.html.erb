@@ -22,8 +22,8 @@
 
 <section class="intro-brig">
   <div class="row">
-    <div class="small-12 small-centered medium-10 columns medium-spacer">
-      <p>Anyone who knew Brig knew he loved life and didn’t slow down, ever. He was incredible and so special. His girls are only seven, three, and 10 months old. And the way they will know their magnificent father and all of the lives that he touched. </p>
+    <div class="small-11 small-centered medium-10 columns medium-spacer">
+      <p>Anyone who knew Brig knew he loved life and didn’t slow down, ever. He was incredible and so special. His girls are only seven, three, and 10 months old. And the way they will know their magnificent father and all of the lives that he touched is through you. </p>
 
       <p>We need your stories and experiences with Brig, everything you remember about this amazing man. So that his girls, and all of us, can remember and know him through you.</p>
     </div>
@@ -32,7 +32,7 @@
 
 <section class="share-my-memories">
   <div class="row">
-    <div class="small-12 small-centered medium-10 columns medium-spacer">
+    <div class="small-11 small-centered medium-10 columns medium-spacer">
       <%= render 'form'  %>
       <p class="link"><%= link_to "Have a private memory?", new_private_memory_path %></p>
     </div>
@@ -43,14 +43,14 @@
   <% @memories.each do |memory| %>
   <!-- Memory -->
   <div class="row">
-    <div class="small-12 medium-10 small-centered columns medium-spacer-top">
+    <div class="small-11 medium-10 small-centered columns medium-spacer-top">
       <%= link_to memory.post, memory_path(memory) %>
     </div>
   </div>
 
   <!-- Who Shared this Memory? -->
   <div class="row">
-    <div class="small-12 medium-10 small-centered columns small-spacer-top">
+    <div class="small-11 medium-10 small-centered columns small-spacer-top">
       by <%= memory.name %>
     </div>
   </div>

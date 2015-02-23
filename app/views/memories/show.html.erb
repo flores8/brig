@@ -1,14 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="show-memory">
+	<div class="row">
+		<div class="small-11 small-11 small-centered columns big-spacer-top small-spacer-bottom text-center">
+			<h1>Your Memory</h1>
+		</div>
+	</div>
 
-<p>
-  <strong>Post:</strong>
-  <%= @memory.post %>
-</p>
+	<div class="row">
+		<div class="small-11 medium-8 small-centered columns">
+			<p><%= @memory.post %></p>
+			<p class="created-by">submitted <%= time_ago_in_words(@memory.created_at) %> ago by <%= @memory.name %></p>
+		</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @memory.name %>
-</p>
+		<div class="small-11 small-centered columns small-spacer-top">
+			<%= link_to 'Edit', edit_memory_path(@memory), class: "button expand" %>
+		</div>
+	</div>
 
-<%= link_to 'Edit', edit_memory_path(@memory) %> |
-<%= link_to 'Back', memories_path %>
+</div>
