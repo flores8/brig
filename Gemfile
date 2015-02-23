@@ -6,6 +6,7 @@ gem "jquery-slick-rails"
 gem 'pg'
 gem 'rails_12factor', group: :production
 gem 'devise'
+gem 'figaro', '1.0'
 
 # Default gems
 gem 'rails', '4.1.8'
