@@ -45,7 +45,12 @@
   <div class="row">
     <div class="small-11 medium-10 small-centered columns medium-spacer-top">
       <p><%= simple_format(memory.post) %></p>
-      <p class="created-by">submittted <%= time_ago_in_words(memory.created_at) %> ago by <%= memory.name %> <span class="right">Brig's <%= memory.relationship %></span></p>
+      <p class="created-by">
+        submittted <%= time_ago_in_words(memory.created_at) %> ago by <%= memory.name %> 
+        <% if memory.relationship.present? %>
+          <span class="right">Brig's <%= memory.relationship %></span>
+        <% end %>
+      </p>
     </div>
   </div>
 
