@@ -2,6 +2,7 @@ class MemoriesController < ApplicationController
   before_action :set_memory, only: [:show, :edit, :update, :destroy]
 
   def index
+    binding.pry
     @memories = Memory.all
     @memory = Memory.new
   end
