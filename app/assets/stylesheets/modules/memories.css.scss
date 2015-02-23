@@ -30,7 +30,16 @@ section.intro-brig {
 		line-height: 2.5rem;
 	}
 }
-
+section.share-my-memories {
+	p.link {
+		text-align: center;
+		font-size: 1rem;
+		padding-top: 1.5rem;
+		a {
+			@include link-center-out($blue, $blue);
+		}
+	}
+}
 section.share-memory {
 	h1 {
 		font-family: 'Vollkorn', "Times New Roman", Times, serif;

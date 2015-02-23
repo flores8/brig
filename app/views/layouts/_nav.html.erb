@@ -13,7 +13,7 @@
 					<!-- Right Nav Section -->
 					<ul class="right">
 						<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-						<li class="<%= 'active' if current_page?(new_memory_path) %><%= 'active' if controller.controller_name == "memories" %>"><%= link_to "Share a Memory", new_memory_path %></li>
+						<li class="<%= 'active' if current_page?(new_memory_path) %>"><%= link_to "Share a Memory", new_memory_path %></li>
 						<li class="<%= 'active' if current_page?(new_private_memory_path) %><%= 'active' if controller.controller_name == "private_memories" %>"><%= link_to "Share a Private Memory", new_private_memory_path %></li>
 					</ul>
 				</section>
