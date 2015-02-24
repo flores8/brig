@@ -11,9 +11,17 @@
 			<p class="created-by">submitted <%= time_ago_in_words(@memory.created_at) %> ago by <%= @memory.name %></p>
 		</div>
 
-		<div class="small-11 medium-8 small-centered columns small-spacer-top">
-			<%= link_to 'Edit', edit_memory_path(@memory), class: "button expand" %>
-		</div>
+		<% if policy(@memory).edit? %>
+			<div class="small-11 medium-8 small-centered columns small-spacer-top">
+				<%= link_to 'Edit', edit_memory_path(@memory), class: "button expand" %>
+			</div>
+		<% end %>
+
+		<% if policy(@memory).destroy? %>
+			<div class="small-12 small-centered columns text-center">
+				<p><%= link_to "Delete", memory_path, method: :delete,  class: "link-center-out" %></p>
+			</div>
+		<% end %>
 	</div>
 
 </div>

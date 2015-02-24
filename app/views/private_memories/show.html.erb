@@ -12,8 +12,16 @@
 			<p class="created-by">submitted <%= time_ago_in_words(@private_memory.created_at) %> ago by <%= @private_memory.name %> <span class="right">Brig's <%= @private_memory.relationship %></span></p>
 		</div>
 
-		<div class="small-11 medium-6 small-centered columns small-spacer-top">
-			<%= link_to 'Edit', edit_private_memory_path(@private_memory), class: "button expand" %>
-		</div>
+		<% if policy(@private_memory).edit? %>
+			<div class="small-11 medium-6 small-centered columns small-spacer-top">
+				<%= link_to 'Edit', edit_private_memory_path(@private_memory), class: "button expand" %>
+			</div>
+		<% end %>
+
+		<% if policy(@private_memory).destroy? %>
+			<div class="small-11 small-centered columns text-center">
+				<%= link_to "Delete", private_memory_path, method: :destroy, class: "link-center-out" %>
+			</div>
+		<% end %>
 	</div>
 </div>
