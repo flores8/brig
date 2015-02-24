@@ -62,9 +62,9 @@
       <% end %>
     </div>
 
-    <div class="small-11 medium-5 small-centered columns small-spacer-top">
+    <div class="small-11 medium-5 small-centered columns text-center">
       <% if policy(memory).destroy? %>
-        <p> <%= link_to "delete", memory_path, method: :delete %></p>
+        <p><%= link_to "Delete", memory_path(memory), method: :delete, class: "link-center-out", data: { confirm: "Are you sure? If you delete this memory it cannot be recovered." } %></p>
       <% end %>
     </div>
   </div>

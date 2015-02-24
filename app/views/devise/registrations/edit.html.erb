@@ -70,7 +70,11 @@
       <div class="content active" id="account-type">
         <div class="small-11 medium-6 small-centered columns">
           <div class="medium-spacer-top">
-            <p>You are an admin user with the priviledge to edit all memories. Thank you for helping update and keep these memories of Brig free from grammar and spelling mistakes.</p>
+            <% if current_admin.role == nil %>
+              <p>You are an admin user with the priviledge to edit all memories. Thank you for helping update and keep these memories of Brig free from grammar and spelling mistakes.</p>
+            <% elsif current_admin.role == "superadmin" %>
+              <p>You are a SuperAdmin and have all priviledges. You can edit and delete any memory.</p>
+            <% end %>
           </div>
         </div>
       </div>
