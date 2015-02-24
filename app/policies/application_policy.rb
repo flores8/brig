@@ -32,7 +32,7 @@ class ApplicationPolicy
   end
 
   def destroy?
-    admin.present? && (record.admin == admin || admin.superadmin?)
+    admin.present? && (record.admin == admin )
   end
 
   def scope
