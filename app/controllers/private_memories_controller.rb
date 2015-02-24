@@ -5,6 +5,7 @@ class PrivateMemoriesController < ApplicationController
   # GET /private_memories.json
   def index
     @private_memories = PrivateMemory.all
+    authorize @private_memories
   end
 
   # GET /private_memories/1
@@ -15,6 +16,7 @@ class PrivateMemoriesController < ApplicationController
   # GET /private_memories/new
   def new
     @private_memory = PrivateMemory.new
+    authorize @private_memory 
   end
 
   # GET /private_memories/1/edit
@@ -25,7 +27,7 @@ class PrivateMemoriesController < ApplicationController
   # POST /private_memories.json
   def create
     @private_memory = PrivateMemory.new(private_memory_params)
-
+    authorize @private_memory
     respond_to do |format|
       if @private_memory.save
         format.html { redirect_to @private_memory, notice: 'Thank you for sharing your memory of Brig!' }
@@ -65,6 +67,7 @@ class PrivateMemoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_private_memory
       @private_memory = PrivateMemory.find(params[:id])
+      authorize @private_memory
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
