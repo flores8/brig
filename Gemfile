@@ -9,6 +9,8 @@ gem 'devise'
 gem 'figaro', '1.0'
 gem 'pry'
 gem 'pundit'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Default gems
 gem 'rails', '4.1.8'
