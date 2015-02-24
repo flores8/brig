@@ -39,8 +39,15 @@
 
     <!-- Create this Memory -->
     <div class="row">
-      <div class="small-11 medium-7 small-centered columns small-spacer">
+      <div class="small-11 medium-7 small-centered columns small-spacer-top">
         <%= f.submit "Share My Memory", class: "button expand" %>
+      </div>
+    </div>
+
+    <!-- Cancel -->
+    <div class="row">
+      <div class="small-12 small-centered columns text-center">
+        <p><%= link_to "Cancel", memories_path, class: "link-center-out" %></p>
       </div>
     </div>
 

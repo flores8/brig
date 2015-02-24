@@ -110,6 +110,13 @@
 	.button {
 		font-size: .55em;
 	}
+	a.link-center-out {
+		@include link-center-out(darken($gray, 25%), $blue);
+		font-size: 1.5rem;
+		&:hover {
+			color: $blue;
+		}
+	}
 	/*#account-tabs-navigation {
 		display: inline-block;
 		margin-left: auto;
