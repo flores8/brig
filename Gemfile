@@ -11,6 +11,7 @@ gem 'pry'
 gem 'pundit'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog'
 
 # Default gems
 gem 'rails', '4.1.8'

@@ -107,6 +107,9 @@
 	input[type="submit"].notice {
 		@include button ($blue, white, 1em 1em);
 	}
+	input[type="file"] {
+		padding: 1rem;
+	}
 	.button {
 		font-size: .55em;
 	}

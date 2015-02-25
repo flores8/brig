@@ -6,6 +6,11 @@
 	</div>
 
 	<div class="row">
+		<div class="small-12 small-centered columns">
+			<%= image_tag(@memory.image) %>
+		</div>
+	</div>
+	<div class="row">
 		<div class="small-11 medium-10 small-centered columns">
 			<p><%= @memory.post %></p>
 			<p class="created-by">submitted <%= time_ago_in_words(@memory.created_at) %> ago by <%= @memory.name %></p>
