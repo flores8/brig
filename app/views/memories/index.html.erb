@@ -41,6 +41,16 @@
 
 <section class="all-memories big-spacer-bottom">
   <% @memories.each do |memory| %>
+
+  <% if memory.image? %>
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <%= image_tag(memory.image) %>
+      </div>
+    </div>
+  <% end %>
+
+
   <!-- Memory -->
   <div class="row">
     <div class="small-11 medium-10 small-centered columns medium-spacer-top">
