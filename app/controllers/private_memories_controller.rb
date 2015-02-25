@@ -57,8 +57,9 @@ class PrivateMemoriesController < ApplicationController
   # DELETE /private_memories/1.json
   def destroy
     @private_memory.destroy
+    authorize @private_memory
     respond_to do |format|
-      format.html { redirect_to private_memories_url, notice: 'Your memory has been deleted.' }
+      format.html { redirect_to private_memories_path, notice: 'Your memory has been deleted.' }
       format.json { head :no_content }
     end
   end

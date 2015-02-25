@@ -28,7 +28,7 @@
 
 		<% if policy(@private_memory).destroy? %>
 			<div class="small-11 small-centered columns text-center">
-				<%= link_to "Delete", private_memory_path(@private_memory, method: :destroy, class: "link-center-out", data: { confirm: "Are you sure? If you delete this memory it cannot be recovered." } %>
+				<%= link_to "Delete", private_memory_path(@private_memory), method: :destroy, class: "link-center-out", data: { confirm: "Are you sure? If you delete this memory it cannot be recovered." } %>
 			</div>
 		<% end %>
 	</div>
