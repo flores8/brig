@@ -8,6 +8,15 @@
   <!-- List all memories -->
   <% @private_memories.each do |memory| %>
 
+    <!-- Image -->
+    <% if memory.image? %>
+      <div class="row">
+        <div class="small-12 small-centered columns">
+          <%= image_tag(memory.image) %>
+        </div>
+      </div>
+    <% end %>
+
     <!-- Private Memory -->
     <div class="row">
       <div class="small-11 medium-10 small-centered columns medium-spacer-top">

@@ -2,9 +2,17 @@
 	<div class="row">
 		<div class="small-11 small-centered columns big-spacer-top small-spacer-bottom text-center">
 			<h1>Your Private Memory</h1>
-			<p></p>
 		</div>
 	</div>
+
+
+	<% if @private_memory.image? %>
+		<div class="row">
+			<div class="small-12 small-centered columns">
+				<%= image_tag(@private_memory.image) %>
+			</div>
+		</div>
+	<% end %>
 
 	<div class="row">
 		<div class="small-11 medium-8 small-centered columns">

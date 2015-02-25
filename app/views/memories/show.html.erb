@@ -5,11 +5,14 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="small-12 small-centered columns">
-			<%= image_tag(@memory.image) %>
+	<% if @memory.image? %>
+		<div class="row">
+			<div class="small-12 small-centered columns">
+				<%= image_tag(@memory.image) %>
+			</div>
 		</div>
-	</div>
+	<% end %>
+	
 	<div class="row">
 		<div class="small-11 medium-10 small-centered columns">
 			<p><%= @memory.post %></p>

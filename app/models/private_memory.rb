@@ -4,4 +4,6 @@ class PrivateMemory < ActiveRecord::Base
 	validates :body, presence: true
 	validates :name, presence: true
 	validates :relationship, presence: true
+
+	mount_uploader :image, ImageUploader
 end
