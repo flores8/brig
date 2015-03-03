@@ -12,6 +12,7 @@ gem 'pundit'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+gem 'newrelic_rpm'
 
 # Default gems
 gem 'rails', '4.1.8'
