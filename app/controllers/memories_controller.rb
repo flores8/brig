@@ -2,7 +2,7 @@ class MemoriesController < ApplicationController
   before_action :set_memory, only: [:show, :edit, :update, :destroy]
 
   def index
-    @memories = Memory.all
+    @memories = Memory.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @memory = Memory.new
     authorize @memories
   end

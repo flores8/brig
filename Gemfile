@@ -13,6 +13,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'newrelic_rpm'
+gem 'will_paginate'
 
 # Default gems
 gem 'rails', '4.1.8'

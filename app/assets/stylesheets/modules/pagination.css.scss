@@ -1,0 +1,20 @@
+@import "globals/all";
+
+#infinite-scrolling {
+	text-align: center;
+	font-size: 1.2rem;
+	a, span.previous_page, span.next_page {
+		margin: 0 .25rem;
+		padding: .5rem 1rem;
+		&:hover {
+			background-color: $gray;
+			color: $text;
+		}
+	}
+	em.current {
+		background-color: $text;
+		color: $white;
+		padding: .5rem 1rem;
+		margin: 0 .25rem;
+	}
+}
