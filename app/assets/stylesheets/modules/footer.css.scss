@@ -10,4 +10,14 @@ footer {
 		font-size: 1.1em;
 		letter-spacing: 1px;
 	}
+	p.login {
+		text-transform: lowercase;
+		margin-top: 2rem;
+		a {
+			color: $text;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
 }
