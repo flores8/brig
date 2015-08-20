@@ -5,6 +5,10 @@ class MemoriesController < ApplicationController
     @memories = Memory.paginate(page: params[:page], per_page: 5).order('created_at DESC')
     @memory = Memory.new
     authorize @memories
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /memories/1
