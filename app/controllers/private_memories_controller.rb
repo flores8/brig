@@ -28,14 +28,18 @@ class PrivateMemoriesController < ApplicationController
   def create
     @private_memory = PrivateMemory.new(private_memory_params)
     authorize @private_memory
-    respond_to do |format|
-      if @private_memory.save
-        format.html { redirect_to @private_memory, notice: 'Thank you for sharing your memory of Brig!' }
-        format.json { render :show, status: :created, location: @private_memory }
-      else
-        format.html { render :new }
-        format.json { render json: @private_memory.errors, status: :unprocessable_entity }
+    if verify_recaptcha(:model => @private_memory, :message => "Are you a robot? If you are indeed human, please verify below. :)")
+      respond_to do |format|
+        if @private_memory.save
+          format.html { redirect_to @private_memory, notice: 'Thank you for sharing your memory of Brig!' }
+          format.json { render :show, status: :created, location: @private_memory }
+        else
+          format.html { render :new }
+          format.json { render json: @private_memory.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      render :new
     end
   end
 

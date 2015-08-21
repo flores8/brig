@@ -31,14 +31,18 @@ class MemoriesController < ApplicationController
   def create
     @memory = Memory.new(memory_params)
     authorize @memory
-    respond_to do |format|
-      if @memory.save
-        format.html { redirect_to memories_path, notice: 'Thank you for sharing your memory of Brig!' }
-        format.json { render :show, status: :created, location: memories_path }
-      else
-        format.html { render :new }
-        format.json { render json: @memory.errors, status: :unprocessable_entity }
+    if verify_recaptcha(:model => @memory, :message => "Are you a robot? If you are indeed human, please verify below. :)")
+      respond_to do |format|
+        if @memory.save
+          format.html { redirect_to memories_path, notice: 'Thank you for sharing your memory of Brig!' }
+          format.json { render :show, status: :created, location: memories_path }
+        else
+          format.html { render :new }
+          format.json { render json: @memory.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      render :new
     end
   end
 

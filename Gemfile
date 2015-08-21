@@ -14,6 +14,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'newrelic_rpm'
 gem 'will_paginate'
+gem "recaptcha", :require => "recaptcha/rails"
 
 # Default gems
 gem 'rails', '4.1.8'
